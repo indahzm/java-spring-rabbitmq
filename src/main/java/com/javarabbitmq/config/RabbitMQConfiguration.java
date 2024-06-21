@@ -50,7 +50,7 @@ public class RabbitMQConfiguration {
 //        connectionFactory.setPort(rabbitMQPort);
 //        connectionFactory.setUsername(rabbitMQUsername);
 //        connectionFactory.setPassword(rabbitMQPassword);
-        connectionFactory.setVirtualHost("/finance");
+        connectionFactory.setVirtualHost("/");
 
         return connectionFactory;
     }

@@ -25,7 +25,7 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @GetMapping(path= "/add-order")
+    @PostMapping(path= "/add-order")
     public void addOrder() throws IOException, TimeoutException {
         Order order = new Order();
         order.setOrderId(RandomUtil.getPositiveInt());

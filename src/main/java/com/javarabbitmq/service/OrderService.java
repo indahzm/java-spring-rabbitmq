@@ -32,6 +32,7 @@ public class OrderService {
     }
 
     public void sendOrder(Order order) throws IOException, TimeoutException {
+        System.out.println("orderId : " + order.getOrderId() + "\n userId : " + order.getUserId() + "\n amount : " + order.getAmount().toString());
 //        Connection connection = connectionFactory.newConnection();
 //        Channel channel = connection.createChannel();
 //
@@ -42,6 +43,6 @@ public class OrderService {
 //        channel.close();
 //        connection.close();
 
-        rabbitTemplate.convertAndSend(exchange,routingKey, "order");
+        rabbitTemplate.convertAndSend(exchange,routingKey, "orderId : " + order.getOrderId() + "\n userId : " + order.getUserId() + "\n amount : " + order.getAmount().toString());
     }
 }
